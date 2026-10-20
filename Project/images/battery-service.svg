@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title">
+  <title id="title">Car battery check</title>
+  <rect width="1000" height="700" fill="#243149"/>
+  <rect x="70" y="80" width="860" height="540" rx="24" fill="#31415e"/>
+  <rect x="170" y="170" width="660" height="370" rx="35" fill="#2563eb"/>
+  <rect x="250" y="140" width="110" height="35" rx="8" fill="#aebbd0"/>
+  <rect x="640" y="140" width="110" height="35" rx="8" fill="#aebbd0"/>
+  <rect x="220" y="220" width="560" height="270" rx="18" fill="#eaf2ff"/>
+  <path d="M535 255 L430 370 H500 L465 455 L580 330 H510 Z" fill="#f6b84a"/>
+  <rect x="275" y="340" width="95" height="20" rx="10" fill="#2563eb"/>
+  <rect x="630" y="340" width="95" height="20" rx="10" fill="#2563eb"/>
+  <rect x="668" y="302" width="20" height="95" rx="10" fill="#2563eb"/>
+</svg>

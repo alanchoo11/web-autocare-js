@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCare Service | Schedule</title>
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link visually-hidden-focusable" href="#main-content">Skip to content</a>
+    <div class="site-note">AutoCare Service · Car maintenance, made simple</div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">AutoCare</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="siteNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="schedule.html">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="page-header">
+        <div class="container">
+            <h1>Service Schedule</h1>
+            <p>Know our working hours before you book.</p>
+        </div>
+    </div>
+    <main id="main-content">
+        <section class="bg-white py-5">
+            <div class="container">
+                <div class="section-heading text-center mb-4">
+                    <h2>Service Schedule</h2>
+                    <p>This schedule shows our general working hours and the services usually available each day, so you know when to plan your visit.</p>
+                </div>
+                <p>Current date and time: <time id="current-date-time"></time></p>
+                <div class="table-wrapper table-responsive">
+                    <table>
+                        <caption>Example workshop hours. Sunday is closed. These are not live appointment slots.</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Day</th>
+                                <th scope="col">Opening Hours</th>
+                                <th scope="col">Available Services</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monday</td>
+                                <td>09:00–18:00</td>
+                                <td>Full Service</td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>09:00–18:00</td>
+                                <td>Maintenance</td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>09:00–18:00</td>
+                                <td>Diagnostics</td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>09:00–18:00</td>
+                                <td>Brake &amp; Tire Service</td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td>09:00–18:00</td>
+                                <td>Full Service</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>10:00–15:00</td>
+                                <td>Selected Services</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>Closed</td>
+                                <td>&mdash;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light py-5">
+            <div class="container about-block row align-items-center g-4 mx-auto">
+                <div class="about-text col-12 col-lg-6">
+                    <h2>Before Your Appointment</h2>
+                    <p>A few simple things help your appointment go smoothly:</p>
+                    <ul class="includes-list">
+                        <li>Bring your vehicle documentation</li>
+                        <li>Arrive a few minutes early</li>
+                        <li>Describe any noticeable issues</li>
+                        <li>Tell the technician about recent repairs</li>
+                        <li>Keep your booking information available</li>
+                    </ul>
+                </div>
+                <div class="about-image col-12 col-lg-6">
+                    <img class="img-fluid" src="images/workshop-photo.png" alt="Workshop with navy cabinets and a blue sedan">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-inner d-flex flex-wrap justify-content-between">
+                <div><strong>AutoCare.</strong><p>Good car care starts with a clear plan.</p></div>
+                <div><p>SE2508 · Student project</p><p>Alan Akylbek · Aitemir Nazimov · Beksultan Amantai</p></div>
+            </div>
+            <nav class="footer-links d-flex flex-wrap gap-4" aria-label="Footer navigation">
+                <a href="services.html">Explore services</a>
+                <a href="schedule.html">Opening hours</a>
+                <a href="contact.html">Contact</a>
+                <a href="media-queries.html">Responsive layout example</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

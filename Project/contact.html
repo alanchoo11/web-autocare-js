@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCare Service | Contact</title>
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link visually-hidden-focusable" href="#main-content">Skip to content</a>
+    <div class="site-note">AutoCare Service · Car maintenance, made simple</div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">AutoCare</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="siteNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="page-header">
+        <div class="container">
+            <h1>Contact AutoCare</h1>
+            <p>We're happy to answer questions about your vehicle.</p>
+        </div>
+    </div>
+    <main id="main-content">
+        <section class="bg-white py-5">
+            <div class="container">
+                <div class="row g-4 mb-5">
+                    <div class="col-12 col-md-6 col-lg-4"><article class="card h-100 text-center"><div class="card-body p-4">
+                        <h3>Phone</h3>
+                        <p>+7 700 000 0000</p>
+                    </div></article></div>
+                    <div class="col-12 col-md-6 col-lg-4"><article class="card h-100 text-center"><div class="card-body p-4">
+                        <h3>Email</h3>
+                        <p>service@autocare.example</p>
+                    </div></article></div>
+                    <div class="col-12 col-md-6 col-lg-4"><article class="card h-100 text-center"><div class="card-body p-4">
+                        <h3>Location</h3>
+                        <p>City Service Center (example address)</p>
+                    </div></article></div>
+                </div>
+                <div class="contact-layout row g-4">
+                    <div class="contact-image col-12 col-lg-6">
+                        <img class="img-fluid" src="images/service-photo.png" alt="Mechanic holding a vehicle diagnostic tablet">
+                    </div>
+                    <div class="contact-form-wrap col-12 col-lg-6">
+                        <h2>Send Us a Message</h2>
+                        <form class="contact-form">
+                            <p class="demo-note">These are sample contact details for a fictional workshop. This demo form does not send messages.</p>
+
+                            <div class="form-group mb-3">
+                                <label for="contact-name">Name</label>
+                                <input class="form-control" type="text" id="contact-name" name="contact-name" placeholder="Your name" required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="contact-email">Email</label>
+                                <input class="form-control" type="email" id="contact-email" name="contact-email" placeholder="you@example.com" required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="contact-topic">Topic</label>
+                                <select class="form-select" id="contact-topic" name="contact-topic">
+                                    <option value="general">General Question</option>
+                                    <option value="booking">Booking Question</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="contact-message">Message</label>
+                                <textarea class="form-control" id="contact-message" name="contact-message" required placeholder="How can we help?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Preview message</button>
+                            <div id="contact-result" class="form-result" role="status" tabindex="-1"></div>
+                        </form>
+                        <button type="button" class="btn btn-primary mt-3" id="open-subscription">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-inner d-flex flex-wrap justify-content-between">
+                <div><strong>AutoCare.</strong><p>Good car care starts with a clear plan.</p></div>
+                <div><p>SE2508 · Student project</p><p>Alan Akylbek · Aitemir Nazimov · Beksultan Amantai</p></div>
+            </div>
+            <nav class="footer-links d-flex flex-wrap gap-4" aria-label="Footer navigation">
+                <a href="services.html">Explore services</a>
+                <a href="schedule.html">Opening hours</a>
+                <a href="contact.html">Contact</a>
+                <a href="media-queries.html">Responsive layout example</a>
+            </nav>
+        </div>
+    </footer>
+    <dialog id="subscription-dialog" aria-labelledby="subscription-title">
+        <div class="d-flex justify-content-between align-items-center gap-3 mb-3">
+            <h2 id="subscription-title">Subscribe</h2>
+            <button type="button" class="btn btn-outline-dark" id="close-subscription">Close</button>
+        </div>
+        <p>Front-end demo. No data is sent.</p>
+        <form id="subscription-form">
+            <div class="mb-3">
+                <label for="subscriber-name">Name</label>
+                <input class="form-control" id="subscriber-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="subscriber-email">Email</label>
+                <input class="form-control" type="email" id="subscriber-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="subscriber-password">Password</label>
+                <input class="form-control" type="password" id="subscriber-password" name="password" minlength="8" autocomplete="new-password" aria-describedby="password-help" required>
+                <small id="password-help">At least 8 characters. Use a test password.</small>
+            </div>
+            <div class="mb-3">
+                <label for="subscriber-confirm">Confirm password</label>
+                <input class="form-control" type="password" id="subscriber-confirm" name="confirm-password" autocomplete="new-password" required>
+            </div>
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+            <p id="subscription-result" class="form-result" role="status"></p>
+        </form>
+    </dialog>
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
