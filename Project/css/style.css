@@ -140,3 +140,6 @@ dialog h2 { font-size: 1.8rem; margin: 0; }
 @media (prefers-reduced-motion: reduce) {
     body, .faq-answer { transition: none; }
 }
+
+/* Assignment 5: the existing body and FAQ transitions are reused. */
+#about-details { display: none; margin-top: 20px; }

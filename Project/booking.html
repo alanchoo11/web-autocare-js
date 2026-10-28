@@ -33,7 +33,7 @@
     <div class="page-header">
         <div class="container">
             <h1>Book Your Car Service</h1>
-            <p>Choose the service you need and send us your preferred appointment details.</p>
+            <p>Choose a service and preview your preferred appointment details.</p>
         </div>
     </div>
     <main id="main-content">
@@ -41,6 +41,9 @@
             <div class="container">
                 <form id="booking-form">
                     <p class="demo-note">Student demo: this form creates an on-screen preview. It does not send an appointment to a workshop. Use sample details.</p>
+                    <p id="booking-progress" role="status">Step 1 of 2: Your details</p>
+                    <fieldset id="booking-step-1">
+                    <legend>Your details</legend>
                     <div class="form-group mb-3">
                         <label for="name">Full Name</label>
                         <input class="form-control" type="text" id="name" name="name" autocomplete="name" placeholder="Enter your full name" required>
@@ -53,6 +56,10 @@
                         <label for="vehicle">Vehicle Model</label>
                         <input class="form-control" type="text" id="vehicle" name="vehicle" placeholder="e.g. Toyota Camry 2019" required>
                     </div>
+                    <button id="booking-next" type="button" class="btn btn-primary">Next</button>
+                    </fieldset>
+                    <fieldset id="booking-step-2" hidden>
+                    <legend>Appointment details</legend>
                     <div class="form-group mb-3">
                         <label for="service-type">Service Type</label>
                         <select class="form-select" id="service-type" name="service-type">
@@ -89,7 +96,10 @@
                         <input class="form-check-input" type="checkbox" id="booking-consent" name="booking-consent" required>
                         <label class="form-check-label" for="booking-consent">I understand that this is a demonstration, not a confirmed booking.</label>
                     </div>
+                    <button id="booking-back" type="button" class="btn btn-outline-dark">Back</button>
                     <button type="submit" class="btn btn-primary btn-lg">Preview appointment</button>
+                    </fieldset>
+                    <audio id="booking-sound" src="audio/confirmation.wav" preload="auto"></audio>
                     <div id="booking-result" class="form-result" role="status" tabindex="-1"></div>
                 </form>
             </div>

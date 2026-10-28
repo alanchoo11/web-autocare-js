@@ -52,25 +52,109 @@ document.querySelectorAll('form').forEach(function (form) {
     });
 });
 
-// Booking
+// Booking: two steps, one array and a callback for changing the visible step.
 const bookingForm = document.querySelector('#booking-form');
 if (bookingForm) {
     const service = document.querySelector('#service-type');
     const date = document.querySelector('#date');
     const result = document.querySelector('#booking-result');
+    const progress = document.querySelector('#booking-progress');
+    const sound = document.querySelector('#booking-sound');
+    const steps = [document.querySelector('#booking-step-1'),
+        document.querySelector('#booking-step-2')];
+    let currentStep = 0;
+
+    function showStep(index) {
+        currentStep = index;
+        for (let i = 0; i < steps.length; i++) {
+            steps[i].hidden = i !== index;
+        }
+        progress.textContent = `Step ${index + 1} of 2: ${index === 0 ? 'Your details' : 'Appointment details'}`;
+        result.textContent = '';
+        steps[index].querySelector('input, select').focus();
+    }
+
+    function nextStep() {
+        if (validateForm(steps[0], result)) showStep(1);
+    }
+
+    document.querySelector('#booking-next').addEventListener('click', nextStep);
+    document.querySelector('#booking-back').addEventListener('click', function () {
+        showStep(0);
+    });
+    // Hiding a fieldset does not remove its inputs, so Back keeps their values.
     const requestedService = new URLSearchParams(window.location.search).get('service');
     for (const option of service.options) {
         if (option.value === requestedService) service.value = requestedService;
     }
     date.min = todayString();
 
+    const appointment = {
+        service: '',
+        vehicle: '',
+        date: '',
+        time: '',
+        getSummary() {
+            return `Appointment preview: ${this.service} for ${this.vehicle}, on ${this.date} at ${this.time}. Nothing has been sent or booked.`;
+        }
+    };
+
+    function playConfirmation() {
+        sound.pause();
+        sound.currentTime = 0;
+        sound.play().catch(function () {
+            // The preview still works if browser audio is unavailable.
+        });
+    }
+
     bookingForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        if (!validateForm(bookingForm, result)) return;
-        const vehicle = document.querySelector('#vehicle').value.trim();
-        const time = document.querySelector('#time').value;
-        result.textContent = `Appointment preview: ${service.selectedOptions[0].textContent} for ${vehicle}, on ${date.value} at ${time}. Nothing has been sent or booked.`;
+        if (currentStep === 0) {
+            nextStep();
+            return;
+        }
+        if (!validateForm(steps[1], result)) return;
+        appointment.service = service.selectedOptions[0].textContent;
+        appointment.vehicle = document.querySelector('#vehicle').value.trim();
+        appointment.date = date.value;
+        appointment.time = document.querySelector('#time').value;
+        result.textContent = appointment.getSummary();
         result.focus();
+        playConfirmation();
+    });
+}
+
+// Menu: one handler covers keyboard input, switch and forEach.
+const menuLinks = document.querySelectorAll('#siteNav .nav-link');
+menuLinks.forEach(function (link, index) {
+    link.addEventListener('keydown', function (event) {
+        let nextIndex = index;
+        switch (event.key) {
+            case 'ArrowRight':
+            case 'ArrowDown':
+                nextIndex = (index + 1) % menuLinks.length;
+                break;
+            case 'ArrowLeft':
+            case 'ArrowUp':
+                nextIndex = (index - 1 + menuLinks.length) % menuLinks.length;
+                break;
+            default:
+                return;
+        }
+        event.preventDefault();
+        menuLinks[nextIndex].focus();
+    });
+});
+
+// Manipulating Attributes: only the Read More option from the assignment.
+const readMoreButton = document.querySelector('#read-more');
+if (readMoreButton) {
+    const details = document.querySelector('#about-details');
+    readMoreButton.addEventListener('click', function () {
+        const expanded = readMoreButton.getAttribute('aria-expanded') !== 'true';
+        details.style.display = expanded ? 'block' : 'none';
+        readMoreButton.setAttribute('aria-expanded', String(expanded));
+        readMoreButton.textContent = expanded ? 'Read less' : 'Read more';
     });
 }
 
