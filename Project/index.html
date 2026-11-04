@@ -7,8 +7,12 @@
     <title>AutoCare Service | Home</title>
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/assignment6.js"></script>
 </head>
 <body>
+    <div id="scroll-progress" role="progressbar" aria-label="Page reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    <div id="action-toast" role="status" aria-live="polite"></div>
     <a class="skip-link visually-hidden-focusable" href="#main-content">Skip to content</a>
     <div class="site-note">AutoCare Service · Car maintenance, made simple</div>
     <header>
@@ -52,6 +56,17 @@
                 </div>
             </div>
         </section>
+        <section class="bg-light py-5" aria-labelledby="facts-heading">
+            <div class="container">
+                <h2 id="facts-heading">AutoCare at a glance</h2>
+                <p>A quick guide to this student project.</p>
+                <div class="project-stats">
+                    <p><strong class="number-counter" data-target="5" aria-label="5">0</strong> Booking service choices</p>
+                    <p><strong class="number-counter" data-target="3" aria-label="3">0</strong> Student team members</p>
+                    <p><strong class="number-counter" data-target="2" aria-label="2">0</strong> Booking steps</p>
+                </div>
+            </div>
+        </section>
         <section class="bg-white py-5">
             <div class="container">
                 <div class="section-heading text-center mb-4">
@@ -82,7 +97,7 @@
                 </div>
                 <div class="row g-4">
                     <div class="col-12 col-md-6"><article class="card service-card h-100">
-                        <img class="img-fluid" src="images/oil-service-photo.png" alt="Motor oil poured into an engine funnel">
+                        <img class="img-fluid" data-src="images/oil-service-photo.png" alt="Motor oil poured into an engine funnel">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="card-title">Oil Change</h3>
                             <p class="card-text">Regular oil and filter service for engine health.</p>
@@ -90,7 +105,7 @@
                         </div>
                     </article></div>
                     <div class="col-12 col-md-6"><article class="card service-card h-100">
-                        <img class="img-fluid" src="images/brake-service-photo.png" alt="Brake disc and blue caliper">
+                        <img class="img-fluid" data-src="images/brake-service-photo.png" alt="Brake disc and blue caliper">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="card-title">Brake Service</h3>
                             <p class="card-text">Inspection and maintenance for safe braking.</p>
@@ -98,7 +113,7 @@
                         </div>
                     </article></div>
                     <div class="col-12 col-md-6"><article class="card service-card h-100">
-                        <img class="img-fluid" src="images/tire-service-photo.png" alt="Tire and alloy wheel on a blue car">
+                        <img class="img-fluid" data-src="images/tire-service-photo.png" alt="Tire and alloy wheel on a blue car">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="card-title">Tire Service</h3>
                             <p class="card-text">Rotation, inspection and seasonal support.</p>
@@ -106,7 +121,7 @@
                         </div>
                     </article></div>
                     <div class="col-12 col-md-6"><article class="card service-card h-100">
-                        <img class="img-fluid" src="images/service-photo.png" alt="Mechanic using a diagnostic tablet">
+                        <img class="img-fluid" data-src="images/service-photo.png" alt="Mechanic using a diagnostic tablet">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="card-title">Vehicle Diagnostics</h3>
                             <p class="card-text">Identify issues before they become expensive.</p>

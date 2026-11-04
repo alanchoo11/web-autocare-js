@@ -143,3 +143,23 @@ dialog h2 { font-size: 1.8rem; margin: 0; }
 
 /* Assignment 5: the existing body and FAQ transitions are reused. */
 #about-details { display: none; margin-top: 20px; }
+
+/* Assignment 6: search and feedback use the existing AutoCare colors. */
+#scroll-progress { position: fixed; top: 0; left: 0; height: 6px; width: 0; z-index: 2000; background: linear-gradient(90deg, #1856b8, #00b6b0, #ffb648); box-shadow: 0 1px 6px #14213d55; }
+.service-search { position: relative; }
+#service-suggestions { display: none; position: absolute; top: 86px; left: 0; right: 0; padding: 0; margin: 0; list-style: none; background: white; border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 24px #14213d22; z-index: 10; }
+#service-suggestions li { padding: 12px 16px; cursor: pointer; }
+#service-suggestions li:hover, #service-suggestions li[aria-selected=true] { background: var(--pale-blue); }
+#search-status { margin: 10px 0; }
+mark { padding: 0; color: #14213d; background: #ffe08a; }
+.project-stats { display: flex; flex-wrap: wrap; gap: 36px; margin-top: 24px; }
+.project-stats p { flex: 1; min-width: 170px; }
+.number-counter { display: block; font-size: 3rem; line-height: 1.2; color: var(--blue); }
+#action-toast { display: none; position: fixed; right: 20px; bottom: 20px; max-width: min(420px, calc(100vw - 40px)); padding: 18px 22px; color: white; background: var(--navy); border-radius: 12px; box-shadow: 0 6px 24px #14213d44; z-index: 2100; }
+.submit-spinner { display: inline-block; width: 16px; height: 16px; margin-right: 8px; border: 2px solid #ffffff66; border-top-color: white; border-radius: 50%; vertical-align: middle; animation: submit-spin .7s linear infinite; }
+@keyframes submit-spin { to { transform: rotate(360deg); } }
+#copy-controls { margin-top: 16px; }
+#copy-tooltip { display: inline-block; margin: 8px; padding: 6px 10px; background: var(--navy); color: white; border-radius: 6px; }
+#copy-tooltip[hidden] { display: none; }
+img[data-src] { background: var(--pale-blue); }
+@media (prefers-reduced-motion: reduce) { .submit-spinner { animation: none; } }

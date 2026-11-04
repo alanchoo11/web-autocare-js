@@ -1,26 +1,32 @@
-# AutoCare - Assignment 5
-
+# AutoCare - Assignment 6: jQuery
 Team: AutoCare | Group: SE2508
-Alan Akylbek, Beksultan Amantai, Aitemir Nazimov.
+Alan Akylbek, Beksultan Amantai, Aitemir Nazimov
 
-Open index.html in a browser. No installation or build is needed.
+Run: open index.html with internet access, or serve Project with a local web server.
+jQuery 4.0.0 is loaded from the CDN in each HTML head as required by Task 0.
+Clipboard copying works on HTTPS (the published site) or localhost, with browser permission.
+If clipboard access is denied, the site gives an honest manual-copy message.
 
-## Where to demonstrate the requirements
-- Home: the existing Change background button changes a style and starts a CSS transition.
-- About: Read more toggles the existing workshop paragraph using style.display.
-- Main menu: focus a link and use the four arrow keys. keydown, switch and forEach work together.
-- Booking: enter sample name, email and vehicle, click Next, then Back. Both steps retain input values while the page stays open.
-- Booking: choose a future date other than Sunday, accept the demo notice and preview. An object method builds the text; a short local sound plays with no overlapping players.
-- showStep uses an array of two fieldsets and a for loop.
-- Services: the original FAQ still opens smoothly. Contact validation, subscription popup, carousel and Schedule clock remain.
+Task map (custom code: js/assignment6.js)
+0: $(document).ready and the console message "jQuery is ready!"
+1: Services - case-insensitive live filtering of service titles and descriptions.
+2: Services - dropdown suggestions, click or Up/Down + Enter; Escape dismisses.
+3: Services - every occurrence in the searchable card titles/descriptions is highlighted; clear resets it.
+4: All pages - gradient scroll progress, resize and changing content supported.
+5: Home - counters for actual project facts: 5 booking choices, 3 members, 2 steps.
+6: Booking - validate first, disable the form and show a spinner for a 1-second simulated call.
+7: Booking/copy - a temporary jQuery fade-out notification.
+8: Booking preview - real clipboard write, checkmark and visible tooltip after success.
+9: Home/Services - service-card images use data-src; jQuery assigns src on entering the viewport.
+The hero and existing carousel remain eager; not every image should be deferred.
 
-Custom logic: js/main.js. Styles: css/style.css. HTML contains no inline event handlers.
-The project keeps its existing local Bootstrap files and adds no libraries.
-The audio/confirmation.wav file is an original 0.25-second generated tone.
-Forms only display local previews. Inputs are retained between steps, not after a reload.
+The Assignment 5 interactions remain in js/main.js. It signals preview:ready after validation;
+the jQuery handler waits and then calls the original completion callback. No real booking is sent.
+HTML, CSS and JS remain separate. Bootstrap is retained; no jQuery UI or other new library is used.
 
-## Deployment and submission
+Published site: https://alanchoo11.github.io/web-autocare-js/Project/services.html
 Repository: https://github.com/alanchoo11/web-autocare-js
-Website: https://alanchoo11.github.io/web-autocare-js/Project/booking.html
-Keep the Project directory at the repository root when deploying with GitHub Pages.
-Every member submits the ZIP and Assignment 5 PDF report and defends the work.
+
+Defense: demonstrate Services search, Home counters/scroll, Booking spinner/toast/copy,
+and Network requests for below-fold images. Explain the functions marked with task comments.
+Each member submits the ZIP and report and defends the work by the LMS deadline.

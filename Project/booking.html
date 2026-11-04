@@ -7,8 +7,12 @@
     <title>AutoCare Service | Book a Service</title>
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/assignment6.js"></script>
 </head>
 <body>
+    <div id="scroll-progress" role="progressbar" aria-label="Page reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    <div id="action-toast" role="status" aria-live="polite"></div>
     <a class="skip-link visually-hidden-focusable" href="#main-content">Skip to content</a>
     <div class="site-note">AutoCare Service · Car maintenance, made simple</div>
     <header>
@@ -102,6 +106,7 @@
                     </fieldset>
                     <audio id="booking-sound" src="audio/confirmation.wav" preload="auto"></audio>
                     <div id="booking-result" class="form-result" role="status" tabindex="-1"></div>
+                    <div id="copy-controls" hidden><button type="button" id="copy-preview" class="btn btn-outline-dark" aria-describedby="copy-tooltip"><span class="copy-icon" aria-hidden="true">⧉</span> Copy preview</button><span id="copy-tooltip" role="tooltip" hidden>Copied to clipboard!</span></div>
                 </form>
             </div>
         </section>

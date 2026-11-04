@@ -109,6 +109,7 @@ if (bookingForm) {
 
     bookingForm.addEventListener('submit', function (event) {
         event.preventDefault();
+        if (bookingForm.getAttribute('aria-busy') === 'true') return;
         if (currentStep === 0) {
             nextStep();
             return;
@@ -118,9 +119,12 @@ if (bookingForm) {
         appointment.vehicle = document.querySelector('#vehicle').value.trim();
         appointment.date = date.value;
         appointment.time = document.querySelector('#time').value;
-        result.textContent = appointment.getSummary();
-        result.focus();
-        playConfirmation();
+        // jQuery handles the simulated wait; the existing preview stays unchanged.
+        $(bookingForm).trigger('preview:ready', [function () {
+            result.textContent = appointment.getSummary();
+            result.focus();
+            playConfirmation();
+        }]);
     });
 }
 

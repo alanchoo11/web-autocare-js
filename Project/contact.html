@@ -7,8 +7,12 @@
     <title>AutoCare Service | Contact</title>
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/assignment6.js"></script>
 </head>
 <body>
+    <div id="scroll-progress" role="progressbar" aria-label="Page reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    <div id="action-toast" role="status" aria-live="polite"></div>
     <a class="skip-link visually-hidden-focusable" href="#main-content">Skip to content</a>
     <div class="site-note">AutoCare Service · Car maintenance, made simple</div>
     <header>
@@ -56,7 +60,7 @@
                 </div>
                 <div class="contact-layout row g-4">
                     <div class="contact-image col-12 col-lg-6">
-                        <img class="img-fluid" src="images/service-photo.png" alt="Mechanic holding a vehicle diagnostic tablet">
+                        <img class="img-fluid" data-src="images/service-photo.png" alt="Mechanic holding a vehicle diagnostic tablet">
                     </div>
                     <div class="contact-form-wrap col-12 col-lg-6">
                         <h2>Send Us a Message</h2>

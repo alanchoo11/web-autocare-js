@@ -7,8 +7,12 @@
     <title>AutoCare Service | Services</title>
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/assignment6.js"></script>
 </head>
 <body>
+    <div id="scroll-progress" role="progressbar" aria-label="Page reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    <div id="action-toast" role="status" aria-live="polite"></div>
     <a class="skip-link visually-hidden-focusable" href="#main-content">Skip to content</a>
     <div class="site-note">AutoCare Service В· Car maintenance, made simple</div>
     <header>
@@ -58,9 +62,15 @@
                     <h2>Our Services</h2>
                     <p>AutoCare offers a focused set of services for everyday vehicle maintenance.</p>
                 </div>
+                <div class="service-search mb-4">
+                    <label for="service-search">Find a service</label>
+                    <input id="service-search" class="form-control" type="search" autocomplete="off" placeholder="Try oil, brake or tire" role="combobox" aria-autocomplete="list" aria-controls="service-suggestions" aria-expanded="false">
+                    <ul id="service-suggestions" role="listbox" aria-label="Suggested services"></ul>
+                    <p id="search-status" role="status"></p>
+                </div>
                 <div class="row g-4">
                     <div class="col-12 col-md-6"><article class="card service-card h-100">
-                        <img class="img-fluid" src="images/oil-service-photo.png" alt="Motor oil poured into an engine funnel">
+                        <img class="img-fluid" data-src="images/oil-service-photo.png" alt="Motor oil poured into an engine funnel">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="card-title">Oil Change</h3>
                             <p class="card-text">Regular oil and filter service to support engine maintenance.</p>
@@ -68,7 +78,7 @@
                         </div>
                     </article></div>
                     <div class="col-12 col-md-6"><article class="card service-card h-100">
-                        <img class="img-fluid" src="images/brake-service-photo.png" alt="Brake disc and blue caliper">
+                        <img class="img-fluid" data-src="images/brake-service-photo.png" alt="Brake disc and blue caliper">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="card-title">Brake Service</h3>
                             <p class="card-text">Brake inspection and maintenance for everyday driving.</p>
@@ -76,7 +86,7 @@
                         </div>
                     </article></div>
                     <div class="col-12 col-md-6"><article class="card service-card h-100">
-                        <img class="img-fluid" src="images/tire-service-photo.png" alt="Tire and alloy wheel on a blue car">
+                        <img class="img-fluid" data-src="images/tire-service-photo.png" alt="Tire and alloy wheel on a blue car">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="card-title">Tire Service</h3>
                             <p class="card-text">Tire inspection, rotation and seasonal support.</p>
@@ -84,7 +94,7 @@
                         </div>
                     </article></div>
                     <div class="col-12 col-md-6"><article class="card service-card h-100">
-                        <img class="img-fluid" src="images/service-photo.png" alt="Mechanic using a diagnostic tablet">
+                        <img class="img-fluid" data-src="images/service-photo.png" alt="Mechanic using a diagnostic tablet">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="card-title">Vehicle Diagnostics</h3>
                             <p class="card-text">Basic vehicle diagnostics to identify potential issues.</p>
