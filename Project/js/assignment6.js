@@ -100,6 +100,9 @@ $(document).ready(function () {
         const label = button.text();
         form.attr('aria-busy', 'true');
         form.find('fieldset').prop('disabled', true);
+        clearTimeout(copyTimer);
+        $('#copy-tooltip').prop('hidden', true);
+        $('.copy-icon').text('⧉');
         $('#copy-controls').prop('hidden', true);
         $('#booking-result').text('');
         button.prop('disabled', true).html('<span class="submit-spinner" aria-hidden="true"></span> Please wait…');
@@ -118,6 +121,9 @@ $(document).ready(function () {
     let copyTimer;
     $('#copy-preview').on('click', async function () {
         const button = $(this);
+        clearTimeout(copyTimer);
+        button.find('.copy-icon').text('⧉');
+        $('#copy-tooltip').prop('hidden', true);
         const text = $('#booking-result').text();
         if (!text) return;
         button.prop('disabled', true);

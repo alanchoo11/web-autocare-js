@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- AutoCare | SE2508 | Alan Akylbek, Aitemir Nazimov, Beksultan Amantai -->
     <meta charset="UTF-8">
     <link rel="icon" href="data:,">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoCare Service | Services</title>
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/feedback.css">
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/jquery-fallback.js"></script>
     <script src="js/assignment6.js"></script>
 </head>
-<body>
+<body class="services-page">
     <div id="scroll-progress" role="progressbar" aria-label="Page reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
     <div id="action-toast" role="status" aria-live="polite"></div>
     <a class="skip-link visually-hidden-focusable" href="#main-content">Skip to content</a>
@@ -42,7 +45,7 @@
         </div>
     </header>
 
-    <div class="container py-5"><div class="row g-4"><aside class="grid-sidebar col-12 col-lg-3">
+    <aside class="grid-sidebar">
         <h3>Quick Links</h3>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -51,11 +54,12 @@
             <li><a href="schedule.html">View Schedule</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
+        <p class="team-credit">Aitemir Nazimov works on the Services and Booking pages.</p>
         <h3>Need Help?</h3>
         <p>Not sure where to start? Visit the Contact page to try our question form.</p>
     </aside>
 
-    <main id="main-content" class="grid-main col-12 col-lg-9">
+    <main id="main-content" class="grid-main">
         <section class="bg-white">
             <div class="services-main-inner">
                 <div class="section-heading text-center mb-4">
@@ -70,7 +74,7 @@
                 </div>
                 <div class="row g-4">
                     <div class="col-12 col-md-6"><article class="card service-card h-100">
-                        <img class="img-fluid" data-src="images/oil-service-photo.png" alt="Motor oil poured into an engine funnel">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="img-fluid" data-src="images/oil-service-photo.png" alt="Motor oil poured into an engine funnel" width="1536" height="1024">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="card-title">Oil Change</h3>
                             <p class="card-text">Regular oil and filter service to support engine maintenance.</p>
@@ -78,7 +82,7 @@
                         </div>
                     </article></div>
                     <div class="col-12 col-md-6"><article class="card service-card h-100">
-                        <img class="img-fluid" data-src="images/brake-service-photo.png" alt="Brake disc and blue caliper">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="img-fluid" data-src="images/brake-service-photo.png" alt="Brake disc and blue caliper" width="1536" height="1024">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="card-title">Brake Service</h3>
                             <p class="card-text">Brake inspection and maintenance for everyday driving.</p>
@@ -86,7 +90,7 @@
                         </div>
                     </article></div>
                     <div class="col-12 col-md-6"><article class="card service-card h-100">
-                        <img class="img-fluid" data-src="images/tire-service-photo.png" alt="Tire and alloy wheel on a blue car">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="img-fluid" data-src="images/tire-service-photo.png" alt="Tire and alloy wheel on a blue car" width="1536" height="1024">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="card-title">Tire Service</h3>
                             <p class="card-text">Tire inspection, rotation and seasonal support.</p>
@@ -94,7 +98,7 @@
                         </div>
                     </article></div>
                     <div class="col-12 col-md-6"><article class="card service-card h-100">
-                        <img class="img-fluid" data-src="images/service-photo.png" alt="Mechanic using a diagnostic tablet">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="img-fluid" data-src="images/service-photo.png" alt="Mechanic using a diagnostic tablet" width="1672" height="941">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="card-title">Vehicle Diagnostics</h3>
                             <p class="card-text">Basic vehicle diagnostics to identify potential issues.</p>
@@ -120,7 +124,7 @@
                 <div class="faq-answer" id="faq-answer-3" aria-hidden="true"><div><p>Bring your vehicle documents and describe any problems you have noticed.</p></div></div>
             </div>
         </section>
-    </main></div></div>
+    </main>
 
     <section class="bg-light services-benefits">
         <div class="container">

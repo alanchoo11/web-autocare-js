@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- AutoCare | SE2508 | Alan Akylbek, Aitemir Nazimov, Beksultan Amantai -->
     <meta charset="UTF-8">
     <link rel="icon" href="data:,">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoCare Service | About Us</title>
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/feedback.css">
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/jquery-fallback.js"></script>
     <script src="js/assignment6.js"></script>
 </head>
 <body>
@@ -51,7 +54,7 @@
                     <p id="about-details">Our fictional workshop handles everyday maintenance such as oil changes, brake service, tire service and basic diagnostics, all organized around clear appointment times.</p>
                 </div>
                 <div class="about-image col-12 col-lg-6">
-                    <img class="img-fluid" src="images/workshop-photo.png" alt="Workshop with navy cabinets and a blue sedan">
+                    <img class="img-fluid" src="images/workshop-photo.png" alt="Workshop with navy cabinets and a blue sedan" width="1672" height="941">
                 </div>
             </div>
         </section>
@@ -77,22 +80,25 @@
                 </div>
                 <div class="card-group gap-3">
                     <article class="card text-center"><div class="card-body p-4">
-                        <span class="profile-initials" aria-hidden="true">AA</span>
+                        <img class="profile-initials" src="images/team-aa.svg" width="72" height="72" alt="AA team member initials">
                         <h3>Alan Akylbek</h3>
                         <p class="profile-role">Service Coordinator</p>
                         <p>Responsible for the Home and About pages, and for organizing how AutoCare's services are presented to customers.</p>
+                        <a class="btn btn-outline-dark btn-sm mt-auto" href="index.html">View pages</a>
                     </div></article>
                     <article class="card text-center"><div class="card-body p-4">
-                        <span class="profile-initials" aria-hidden="true">AN</span>
+                        <img class="profile-initials" src="images/team-an.svg" width="72" height="72" alt="AN team member initials">
                         <h3>Aitemir Nazimov</h3>
                         <p class="profile-role">Customer Experience Manager</p>
                         <p>Focused on the Services and Booking pages, making sure the booking process feels clear and easy to use.</p>
+                        <a class="btn btn-outline-dark btn-sm mt-auto" href="services.html">View pages</a>
                     </div></article>
                     <article class="card text-center"><div class="card-body p-4">
-                        <span class="profile-initials" aria-hidden="true">BA</span>
+                        <img class="profile-initials" src="images/team-ba.svg" width="72" height="72" alt="BA team member initials">
                         <h3>Beksultan Amantai</h3>
                         <p class="profile-role">Digital &amp; Booking Manager</p>
                         <p>Built the Schedule and Contact pages, including the service schedule table and contact information.</p>
+                        <a class="btn btn-outline-dark btn-sm mt-auto" href="contact.html">View pages</a>
                     </div></article>
                 </div>
             </div>
@@ -127,36 +133,54 @@
                         <button type="button" data-bs-target="#workshopCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
                         <button type="button" data-bs-target="#workshopCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
                         <button type="button" data-bs-target="#workshopCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#workshopCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                        <button type="button" data-bs-target="#workshopCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        <button type="button" data-bs-target="#workshopCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="images/hero-car-photo.png" class="img-fluid d-block w-100" alt="Blue sedan in a bright modern workshop">
+                            <img src="images/hero-car-photo.png" class="img-fluid d-block w-100" alt="Blue sedan in a bright modern workshop" width="1254" height="1254">
                             <div class="carousel-caption"><p class="mb-0">Blue sedan in a bright modern workshop</p></div>
                         </div>
                         <div class="carousel-item">
-                            <img src="images/oil-service-photo.png" class="img-fluid d-block w-100" alt="Motor oil poured into an engine funnel">
+                            <img src="images/oil-service-photo.png" class="img-fluid d-block w-100" alt="Motor oil poured into an engine funnel" width="1536" height="1024">
                             <div class="carousel-caption"><p class="mb-0">Motor oil poured into an engine funnel</p></div>
                         </div>
                         <div class="carousel-item">
-                            <img src="images/brake-service-photo.png" class="img-fluid d-block w-100" alt="Brake disc and blue caliper">
+                            <img src="images/brake-service-photo.png" class="img-fluid d-block w-100" alt="Brake disc and blue caliper" width="1536" height="1024">
                             <div class="carousel-caption"><p class="mb-0">Brake disc and blue caliper</p></div>
                         </div>
                         <div class="carousel-item">
-                            <img src="images/tire-service-photo.png" class="img-fluid d-block w-100" alt="Tire and alloy wheel on a blue car">
+                            <img src="images/tire-service-photo.png" class="img-fluid d-block w-100" alt="Tire and alloy wheel on a blue car" width="1536" height="1024">
                             <div class="carousel-caption"><p class="mb-0">Tire and alloy wheel on a blue car</p></div>
                         </div>
                         <div class="carousel-item">
-                            <img src="images/service-photo.png" class="img-fluid d-block w-100" alt="Mechanic using a diagnostic tablet">
+                            <img src="images/service-photo.png" class="img-fluid d-block w-100" alt="Mechanic using a diagnostic tablet" width="1672" height="941">
                             <div class="carousel-caption"><p class="mb-0">Mechanic using a diagnostic tablet</p></div>
                         </div>
                         <div class="carousel-item">
-                            <img src="images/workshop-photo.png" class="img-fluid d-block w-100" alt="Workshop with navy cabinets and a blue sedan">
+                            <img src="images/workshop-photo.png" class="img-fluid d-block w-100" alt="Workshop with navy cabinets and a blue sedan" width="1672" height="941">
                             <div class="carousel-caption"><p class="mb-0">Workshop with navy cabinets and a blue sedan</p></div>
                         </div>
+                        <div class="carousel-item"><img src="images/mechanic.jpg" class="img-fluid d-block w-100" alt="Vehicle maintenance"><div class="carousel-caption"><p class="mb-0">Vehicle maintenance</p></div></div>
+                        <div class="carousel-item"><img src="images/team.jpg" class="img-fluid d-block w-100" alt="Workshop team illustration"><div class="carousel-caption"><p class="mb-0">Workshop team illustration</p></div></div>
+                        <div class="carousel-item"><img src="images/battery-service.svg" class="img-fluid d-block w-100" alt="Battery service illustration"><div class="carousel-caption"><p class="mb-0">Battery service illustration</p></div></div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#workshopCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
                     <button class="carousel-control-next" type="button" data-bs-target="#workshopCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
-                </div></div>
+                </div>
+                <div class="workshop-grid mt-4" aria-label="Workshop image gallery">
+                    <figure tabindex="0"><img src="images/hero-car-photo.png" alt="Workshop arrival" loading="lazy"><figcaption>Workshop arrival</figcaption></figure>
+                    <figure tabindex="0"><img src="images/oil-service-photo.png" alt="Oil change" loading="lazy"><figcaption>Oil change</figcaption></figure>
+                    <figure tabindex="0"><img src="images/brake-service-photo.png" alt="Brake inspection" loading="lazy"><figcaption>Brake inspection</figcaption></figure>
+                    <figure tabindex="0"><img src="images/tire-service-photo.png" alt="Tire care" loading="lazy"><figcaption>Tire care</figcaption></figure>
+                    <figure tabindex="0"><img src="images/service-photo.png" alt="Diagnostics" loading="lazy"><figcaption>Diagnostics</figcaption></figure>
+                    <figure tabindex="0"><img src="images/workshop-photo.png" alt="Workshop" loading="lazy"><figcaption>Workshop</figcaption></figure>
+                    <figure tabindex="0"><img src="images/mechanic.jpg" alt="Vehicle maintenance" loading="lazy"><figcaption>Vehicle maintenance</figcaption></figure>
+                    <figure tabindex="0"><img src="images/team.jpg" alt="Workshop team illustration" loading="lazy"><figcaption>Workshop team illustration</figcaption></figure>
+                    <figure tabindex="0"><img src="images/battery-service.svg" alt="Battery service illustration" loading="lazy"><figcaption>Battery service illustration</figcaption></figure>
+                </div>
+</div>
         </section>
     </main>
     <footer>

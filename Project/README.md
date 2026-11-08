@@ -1,32 +1,56 @@
-# AutoCare - Assignment 6: jQuery
+# AutoCare - final integrated project (Assignments 1-6)
+
 Team: AutoCare | Group: SE2508
-Alan Akylbek, Beksultan Amantai, Aitemir Nazimov
+Alan Akylbek, Aitemir Nazimov, Beksultan Amantai.
 
-Run: open index.html with internet access, or serve Project with a local web server.
-jQuery 4.0.0 is loaded from the CDN in each HTML head as required by Task 0.
-Clipboard copying works on HTTPS (the published site) or localhost, with browser permission.
-If clipboard access is denied, the site gives an honest manual-copy message.
+Open index.html, or serve the Project directory on localhost. For clipboard access use
+localhost or the published HTTPS site. jQuery loads from the required CDN in the head;
+js/jquery-fallback.js loads the identical local 4.0.0 copy when the CDN is unavailable.
+The CDN can still produce a network error while offline; the local fallback keeps features usable.
 
-Task map (custom code: js/assignment6.js)
-0: $(document).ready and the console message "jQuery is ready!"
-1: Services - case-insensitive live filtering of service titles and descriptions.
-2: Services - dropdown suggestions, click or Up/Down + Enter; Escape dismisses.
-3: Services - every occurrence in the searchable card titles/descriptions is highlighted; clear resets it.
-4: All pages - gradient scroll progress, resize and changing content supported.
-5: Home - counters for actual project facts: 5 booking choices, 3 members, 2 steps.
-6: Booking - validate first, disable the form and show a spinner for a 1-second simulated call.
-7: Booking/copy - a temporary jQuery fade-out notification.
-8: Booking preview - real clipboard write, checkmark and visible tooltip after success.
-9: Home/Services - service-card images use data-src; jQuery assigns src on entering the viewport.
-The hero and existing carousel remain eager; not every image should be deferred.
+Source map
+- HTML: seven connected pages; page credit comments and member footers.
+- css/style.css: shared original branding, forms, FAQ, Flexbox cards, Grid gallery and Services grid areas.
+- css/media-queries.css: standalone no-Bootstrap media-query exercise (3/2/1 cards).
+- css/feedback.css: shared search, scroll progress, counters, spinner, toast and copy feedback.
+- js/main.js: validation, two-step booking, object/method summary, sound, menu arrows,
+  Read More, contact preview, FAQ, subscription popup, background cycle and clock.
+- js/assignment6.js: jQuery ready, service filter/suggestions/highlighting, scroll progress,
+  counters, simulated submit, toast, clipboard and viewport image loading.
+- vendor/: existing Bootstrap and fallback jQuery; images/ and audio/: local assets.
 
-The Assignment 5 interactions remain in js/main.js. It signals preview:ready after validation;
-the jQuery handler waits and then calls the original completion callback. No real booking is sent.
-HTML, CSS and JS remain separate. Bootstrap is retained; no jQuery UI or other new library is used.
+Requirement map
+A1: six main pages plus one exercise; shared CSS, selectors, semantic content, lists,
+three-column schedule table, forms, real circular initials images, credits and team biographies.
+Alan: Home/About; Aitemir: Services/Booking; Beksultan: Schedule/Contact (existing page roles).
+A2: Flexbox navbar and equal-height team cards with image/title/text/action; Services uses
+named CSS grid areas; About has nine grid images with hover/focus captions.
+A3: media query typography and 3/2/1 columns without Bootstrap; Bootstrap two- and
+three-column sections, spacing utilities including responsive spacing, navbar, buttons,
+card-group with images, nine-slide carousel with indicators/controls, responsive forms.
+A4: validation (including password length/match), FAQ, popup, background and live clock.
+A5: DOM/styles/Read More, click, keydown/switch, Next/Back callback, object/method,
+array/for, forEach, one resettable audio player, animations, external code.
+A6: all tasks 0-9; see task comments in assignment6.js.
 
-Published site: https://alanchoo11.github.io/web-autocare-js/Project/services.html
+Historical requirements
+A1 originally forbade Bootstrap, but A3 requires it and A6 requires jQuery. The final
+integrated version follows these later requirements; it is not a replacement for the
+historical framework-free A1 submission. Custom branding/layout spacing is retained
+alongside Bootstrap utilities to preserve the requested design; the early all-custom-CSS
+and later all-Bootstrap-spacing rules cannot both describe the same final stylesheet.
+The media-query exercise still has no Bootstrap dependency. Prior ZIPs are preserved.
+
+Verification
+100 jQuery/regression checks plus 268 extended browser assertions passed in Chrome and
+Edge. Widths include 360, 390, 768 and 1280px across suites. All seven pages, images,
+footers, unique IDs, forms, navigation, carousel, gallery, CSS grid, copy success/failure,
+notifications, sound and fallback were covered. 177 local links/assets resolve.
+See the final audit PDF and verification JSON files for scope and remaining limits.
+
+Important: forms are frontend demonstrations. No booking, message or account is sent
+to a server; data is not retained after reload. Clipboard denial shows manual-copy advice.
+Submission deadlines, historical authorship and defense are verified by the course, not software tests.
+
+Site: https://alanchoo11.github.io/web-autocare-js/Project/index.html
 Repository: https://github.com/alanchoo11/web-autocare-js
-
-Defense: demonstrate Services search, Home counters/scroll, Booking spinner/toast/copy,
-and Network requests for below-fold images. Explain the functions marked with task comments.
-Each member submits the ZIP and report and defends the work by the LMS deadline.

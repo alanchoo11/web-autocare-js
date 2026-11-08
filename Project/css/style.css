@@ -144,22 +144,41 @@ dialog h2 { font-size: 1.8rem; margin: 0; }
 /* Assignment 5: the existing body and FAQ transitions are reused. */
 #about-details { display: none; margin-top: 20px; }
 
-/* Assignment 6: search and feedback use the existing AutoCare colors. */
-#scroll-progress { position: fixed; top: 0; left: 0; height: 6px; width: 0; z-index: 2000; background: linear-gradient(90deg, #1856b8, #00b6b0, #ffb648); box-shadow: 0 1px 6px #14213d55; }
-.service-search { position: relative; }
-#service-suggestions { display: none; position: absolute; top: 86px; left: 0; right: 0; padding: 0; margin: 0; list-style: none; background: white; border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 24px #14213d22; z-index: 10; }
-#service-suggestions li { padding: 12px 16px; cursor: pointer; }
-#service-suggestions li:hover, #service-suggestions li[aria-selected=true] { background: var(--pale-blue); }
-#search-status { margin: 10px 0; }
-mark { padding: 0; color: #14213d; background: #ffe08a; }
-.project-stats { display: flex; flex-wrap: wrap; gap: 36px; margin-top: 24px; }
-.project-stats p { flex: 1; min-width: 170px; }
-.number-counter { display: block; font-size: 3rem; line-height: 1.2; color: var(--blue); }
-#action-toast { display: none; position: fixed; right: 20px; bottom: 20px; max-width: min(420px, calc(100vw - 40px)); padding: 18px 22px; color: white; background: var(--navy); border-radius: 12px; box-shadow: 0 6px 24px #14213d44; z-index: 2100; }
-.submit-spinner { display: inline-block; width: 16px; height: 16px; margin-right: 8px; border: 2px solid #ffffff66; border-top-color: white; border-radius: 50%; vertical-align: middle; animation: submit-spin .7s linear infinite; }
-@keyframes submit-spin { to { transform: rotate(360deg); } }
-#copy-controls { margin-top: 16px; }
-#copy-tooltip { display: inline-block; margin: 8px; padding: 6px 10px; background: var(--navy); color: white; border-radius: 6px; }
-#copy-tooltip[hidden] { display: none; }
-img[data-src] { background: var(--pale-blue); }
-@media (prefers-reduced-motion: reduce) { .submit-spinner { animation: none; } }
+
+/* Final audit: explicit Flexbox cards and Grid areas keep the same palette. */
+.navbar > .container { display: flex; align-items: center; justify-content: space-between; }
+.card-group { display: flex; flex-wrap: wrap; }
+.card-group > .card { flex: 1 1 calc((100% - 32px) / 3); min-width: 0; }
+.card-group .card-body { display: flex; flex-direction: column; align-items: center; }
+.card-group .card { transition: box-shadow .2s; }
+.card-group .card:hover { box-shadow: 0 6px 20px #14213d20; }
+.profile-initials { object-fit: cover; }
+.booking-feature, .layout-feature { width: 64px; height: 64px; object-fit: cover; border-radius: 50%; }
+.workshop-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.workshop-grid figure { position: relative; margin: 0; overflow: hidden; border-radius: var(--radius); }
+.workshop-grid img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.workshop-grid figcaption { position: absolute; bottom: 0; inset-inline: 0; padding: 10px 14px; background: #14213dee; color: white; opacity: 0; transition: opacity .2s; }
+.workshop-grid figure:hover figcaption, .workshop-grid figure:focus figcaption { opacity: 1; }
+.services-page { display: grid; grid-template-columns: minmax(24px, 1fr) minmax(0, 276px) minmax(0, 900px) minmax(24px, 1fr); grid-template-areas: 'note note note note' 'header header header header' '. sidebar main .' 'benefits benefits benefits benefits' 'cta cta cta cta' 'footer footer footer footer'; }
+.services-page > .site-note { grid-area: note; }
+.services-page > header { grid-area: header; }
+.services-page > .grid-sidebar { grid-area: sidebar; margin: 48px 24px 48px 0; }
+.services-page > main { grid-area: main; padding: 48px 0; min-width: 0; }
+.services-page > .services-benefits { grid-area: benefits; }
+.services-page > .services-cta { grid-area: cta; }
+.services-page > footer { grid-area: footer; }
+.team-credit { font-size: .9rem; }
+@media (max-width: 991.98px) {
+    .card-group > .card { flex-basis: calc((100% - 16px) / 2); }
+    .workshop-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .services-page { grid-template-columns: 24px minmax(0, 1fr) 24px; grid-template-areas: 'note note note' 'header header header' '. sidebar .' '. main .' 'benefits benefits benefits' 'cta cta cta' 'footer footer footer'; }
+    .services-page > .grid-sidebar { margin: 48px 0 0; }
+}
+@media (max-width: 767.98px) {
+    .card-group > .card { flex-basis: 100%; }
+    .workshop-grid { grid-template-columns: 1fr; }
+    .workshop-grid figcaption { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .card-group .card, .workshop-grid figcaption { transition: none; }
+}
