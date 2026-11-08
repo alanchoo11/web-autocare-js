@@ -54,3 +54,7 @@ Submission deadlines, historical authorship and defense are verified by the cour
 
 Site: https://alanchoo11.github.io/web-autocare-js/Project/index.html
 Repository: https://github.com/alanchoo11/web-autocare-js
+
+Final report (English)
+[Download the final review of Assignments 1-6](reports/AutoCare_Final_Report_EN.pdf).
+Published PDF: https://alanchoo11.github.io/web-autocare-js/Project/reports/AutoCare_Final_Report_EN.pdf
